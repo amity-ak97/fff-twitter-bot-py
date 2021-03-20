@@ -16,10 +16,10 @@ search_string = '#FridaysForFuture'
 def startLikeNRetweet():
     for tweet in tweepy.Cursor(api.search, search_string).items():
         try:
-            tweet.favorite()
-            print('Favorited...')
             tweet.retweet()
-            print('Retweeted...')
+            tweet.favorite()
+            print('Succeed...')
+
         except tweepy.TweepError as e:
             print(e)
 
