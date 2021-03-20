@@ -1,1 +1,1 @@
-worker: python3 fff-bot.py
+worker: python fff-bot.py
