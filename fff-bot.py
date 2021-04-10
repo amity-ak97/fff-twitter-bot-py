@@ -1,9 +1,10 @@
 import tweepy
+from os import environ
 
-consumer_key = 'LUraIMHlA4nkcBjTkR4OqF4Ww'
-consumer_secret = 'HkHuGWEKvTCBI6L5kTL24cS91keA9GzaOoHgUy7LfDfjvhZIIW'
-access_token = '1357417094304976897-NHbMtF7ZucfupVrqmrIqPK6EXUCDa4'
-access_token_secret = 'x1l9LJt1tQOYdxpj4SNQYGSYTvLplko4ttWGdzSl9OVsk'
+consumer_key = environ['consumer_key']
+consumer_secret = environ['consumer_secret']
+access_token = environ['access_token']
+access_token_secret = environ['access_token_secret']
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
